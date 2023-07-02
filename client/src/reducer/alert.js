@@ -1,7 +1,7 @@
 import { SET_ALERT, REMOVE_ALERT } from "../action/Type";
-
+import {setAlert} from "../action/alert"
 const initailState = [];
-export default function (state = initailState, action) {
+const actionReader = (state = initailState, action) => {
   const { type, payload } = action;
 
   switch (type) {
@@ -13,3 +13,6 @@ export default function (state = initailState, action) {
       return state;
   }
 }
+
+export {setAlert}
+export default actionReader

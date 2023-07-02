@@ -1,7 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Navbar from "./Navbar";
 const Landing = () => {
+  const linkName=["Developers","Register","Login"]
+  const linkPath = ["/profiles","/register","/login"]
   return (
+    <>
+    <Navbar name={linkName} link={linkPath} />
     <section className="landing">
       <div className="dark-overlay">
         <div className="landing-inner">
@@ -21,6 +26,7 @@ const Landing = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

@@ -1,3 +1,5 @@
 import { combineReducers } from "redux";
-
-export default combineReducers({});
+import actionReader from "../reducer/alert"
+export default combineReducers({
+    alert: actionReader
+});

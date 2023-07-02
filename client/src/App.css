@@ -59,11 +59,11 @@
   padding: 5rem 0;
 }
 .container {
-  max-width: 1100px;
+  /* max-width: 1100px; */
   margin: auto;
   overflow: hidden;
   padding: 0 2rem;
-  margin-top: 6rem;
+  margin-top: 8rem;
   margin-bottom: 3rem;
 }
 .x-large {
@@ -329,8 +329,13 @@ img {
 .landing {
   position: relative;
   background: url("https://akm-img-a-in.tosshub.com/indiatoday/images/story/202012/chris-ried-ieic5Tq8YMk-unsplas_1200x768.jpeg?size=690:388")
-    center center/cover no-repeat;
+  center center/cover no-repeat;
   height: 100vh;
+}
+.profileImg{
+  height: 150px;
+  object-fit: cover;
+  width: 150px;
 }
 .landing-inner {
   color: #fff;
@@ -352,123 +357,7 @@ img {
   justify-content: center;
   text-align: center;
 }
-.profile {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 2fr 4fr 2fr;
-  grid-template-columns: 2fr 4fr 2fr;
-  grid-gap: 2rem;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 1rem;
-  line-height: 1.8;
-  margin-bottom: 1rem;
-}
-.profile-grid {
-  display: -ms-grid;
-  display: grid;
-  grid-template-areas: "top top" "about about" "exp edu" "github github";
-  grid-gap: 1rem;
-}
-.profile-grid .profile-top {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: top;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  text-align: center;
-}
-.profile-grid .profile-top img {
-  width: 250px;
-}
-.profile-grid .profile-top .icons a {
-  color: #fff;
-  margin: 0 0.3rem;
-}
-.profile-grid .profile-top .icons a:hover {
-  color: #343a40;
-}
-.profile-grid .profile-about {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: about;
-  text-align: center;
-}
-.profile-grid .profile-about .skills {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  text-align: center;
-}
-.profile-grid .profile-exp {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  grid-area: exp;
-}
-.profile-grid .profile-edu {
-  -ms-grid-row: 3;
-  -ms-grid-column: 2;
-  grid-area: edu;
-}
-.profile-grid .profile-exp > div,
-.profile-grid .profile-edu > div {
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: #ccc 1px dotted;
-}
-.profile-grid .profile-exp:last-child,
-.profile-grid .profile-edu:last-child {
-  border: none;
-}
-.profile-grid .profile-exp p,
-.profile-grid .profile-edu p {
-  margin: 0.5rem 0;
-}
-.profile-grid .profile-github {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: github;
-}
-.profile-grid .profile-github .repo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.profile-grid .profile-github .repo > div:first-child {
-  -webkit-box-flex: 7;
-  -ms-flex: 7;
-  flex: 7;
-  -ms-flex-preferred-size: 70%;
-  flex-basis: 70%;
-}
-.profile-grid .profile-github .repo > div:last-child {
-  -webkit-box-flex: 3;
-  -ms-flex: 3;
-  flex: 3;
-  -ms-flex-preferred-size: 20%;
-  flex-basis: 20%;
-}
+
 .post-form-header {
   padding: 0.5rem;
 }
@@ -488,13 +377,225 @@ img {
 .post img {
   width: 150px;
 }
+
+.text-light{
+  color: #fff;
+}
+
+
+.card{
+  display: flex;
+  
+  background-color: rgb(224, 224, 224);
+  margin-top: 1em;  
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+}
+.imgContainer{
+  flex: 4;
+}
+.profileInfo{
+  flex: 5;
+}
+.profileSkill{
+flex: 3;
+
+}
+.profileBanger img{
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+}
+
+.profileBanger{
+  
+  background-color: #17a2b8;
+  color: white;
+}
+
+.profileInfoContainer ul li a{
+color: #fff;
+}
+.profileBanger{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.profileInfoContainer ul{
+  display: flex;
+  gap: 1em;
+  margin: 0 auto;
+}
+
+.profileInfoContainer ul li {
+  font-size: 20px;
+}
+
+.profileInfoContainer {
+  display: flex; 
+  flex-direction: column; 
+  gap: 0.5em;
+}
+.profileDetail{
+  margin-top: 2em;
+}
+.skillSets{
+  margin-top: 1em;
+}
+.eduExpContainer{
+  display: flex;
+  margin-top: 2em;
+  flex-direction: column;
+  gap: 1em;
+}
+.expsContainer{
+  padding: 1em;
+  background-color: rgb(228, 227, 227);
+  flex: 6;
+}
+.eduContainer{
+  padding: 1em;
+  background-color: rgb(228, 227, 227);
+  flex: 6;
+}
+.repo{
+  border: 2px solid rgb(212, 211, 211);
+  padding: 1em;
+  display: flex;
+  margin-top: 0.8em;
+  justify-content: space-between;
+}
+.repoInfoContainer{
+  flex: 6;
+}
+.repoBadgeContainer{
+  flex: 2;
+}
+.repoBadgeContainer div{
+  text-align: center;
+}
+.repoStar{
+  background-color: #17a2b8;
+  color: white;
+}
+.repoWatcher{
+  background-color: #333;
+  color: white;
+}
+.repoForks{
+  background-color: rgb(209, 208, 208);
+}
+.dashboardLinkContainer{
+  display: flex;
+  gap: 1em;
+  margin-top: 1em;    
+}
+  
+
+.btnMain{
+  padding: 8px;
+  background-color: #17a2b8;
+  color: white;
+  text-align: center;
+  border: none;
+  display: flex;
+  gap: 0.7em;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.tableContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 25px;
+  
+}
+
+
+.expTableContainer th{
+  padding: 5px 10px;
+  background-color: rgb(204, 202, 202);
+}
+.expTableContainer td{
+  padding: 5px 10px;
+}
+.postContainer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2em;
+  margin-top: 1em;
+  padding: 1em;
+  border: 2px solid rgb(201, 200, 200);
+}
+.postImg{
+  flex: 1;
+  /* background-color: #0077b5; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  /* align-items: center; */
+}
+.postDetail{
+  flex: 6;
+}
+.postCount{
+  margin-top: 1em;
+}
+.postCount button{
+  padding: 5px 10px;
+  margin: 2px;
+}
+@media (width >= 1200px){
+  .experienceContainer{
+    width: 35vw;
+  }
+}
+
 @media (max-width: 700px) {
   .hide-sm {
     display: none;
   }
-  .container {
-    margin-top: 8rem;
+  .experienceContainer{
+    width: 65vw;
   }
+
+  .expTableContainer th{
+    font-size: 12px;
+  }
+  .expTableContainer td{
+    font-size: 12px;
+  }
+  .expTableContainer button{
+    font-size: 12px;
+  }
+  .eduExpContainer{
+    flex-direction: row;
+  }
+  .repoBadgeContainer div{
+    font-size: 12px;
+  }
+  
+  .profileInfo p{
+    font-size: 10px;
+  }
+  .profileInfo h1{
+    font-size: 15px;
+  }
+  .profileImg{
+    height: 100px;
+    width: 100px;
+  }
+
+  .profileSkill ul{
+    font-size: 12px;
+  }
+  
   .x-large {
     font-size: 3rem;
   }
@@ -546,5 +647,16 @@ img {
   .post a,
   .post button {
     padding: 0.3rem 0.4rem;
+  }
+  .profileBanger img{
+    height: 175px;
+    width: 175px;
+  }
+}
+
+@media (width <= 450px){
+  .profileImg{
+    height: 70px;
+    width: 70px;
   }
 }

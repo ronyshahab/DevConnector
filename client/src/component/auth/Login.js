@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Navbar from "../layout/Navbar";
 
 function Login() {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
+  
 
   const { email, password } = formData;
 
@@ -19,9 +21,11 @@ function Login() {
 
     console.log(formData);
   };
-
+  const linkName =["Developer", "Register"]
+  const linkPath =["/profiles", "/register"]
   return (
     <div>
+     <Navbar name={linkName} link={linkPath} />
       <section className="container">
         <div className="alert alert-danger">Invalid Credentials</div>
 
@@ -53,10 +57,10 @@ function Login() {
               onChange={(e) => onChange(e)}
             />
           </div>
-          <input type="submit" value="Login" className="btn btn-primary" />
+          <input type="submit" value="Login"  className="btn btn-primary" />
         </form>
         <p className="my-1">
-          Don't have an account? <Link to="\register">Sign Up</Link>
+          Don't have an account? <Link to={"/register"}>Sign Up</Link>
         </p>
       </section>
     </div>

@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { setAlert } from "../../action/alert";
 
+import Navbar from "../layout/Navbar";
+
 const Register = ({ setAlert }) => {
   const [formData, setFormData] = useState({
     name: "",
@@ -27,7 +29,11 @@ const Register = ({ setAlert }) => {
     }
   };
 
+  const linkName =["Developer", "Login"]
+  const linkPath =["/profiles", "/login"]
   return (
+    <>
+    <Navbar name={linkName} link={linkPath} />
     <section className="container">
       <h1 className="large text-primary">Sign Up</h1>
       <p className="lead">
@@ -85,6 +91,7 @@ const Register = ({ setAlert }) => {
         Already have an account? <Link to={"/login"}>Sign In</Link>
       </p>
     </section>
+    </>
   );
 };
 
